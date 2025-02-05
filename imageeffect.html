@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(108, 200, 231);
+            margin: 50px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        img{
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px #82817f;
+            transition:transform 0.5s ease-in-out ;
+        }
+        .float:hover{
+            transform:translateX(-20px)
+        }
+        .flip:hover{
+            transform: rotateY(180deg)
+        }
+        .blur{
+            filter: blur(10px);
+        }
+        .blur:hover{
+            filter: blur(0px);
+        }
+        .pulse{
+            animation: pulse 0.9s infinite alternate;
+        }
+        @keyframes pulse{
+            0%{transform: scale(1);opacity: 1 ;}
+            100%{transform: scale(1.1); opacity: 0.8;}
+        }
+        .shake:hover{
+            animation: shake 0.3s infinite;
+        }
+        @keyframes shake{
+            0%,100%{transform: translateX(0);}
+            20%{transform: translateX(-5px);}
+            50%{transform: translateX(5px);}
+            75%{transform: translateX(-5px);}
+        }
+        .spin:hover{
+            transform: rotate(360deg);
+        }
+        .tilt:hover {
+            transform: skew(10deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>awesome image effects</h1>
+<div class=""container>
+    <div>
+        <h2>1.floating effect</h2>
+        <img src="C:\Users\thond\Downloads\jerry and tom .jpeg" alt="floating image" class="float">
+    </div>
+    <div>
+        <h2>2.flip effect</h2>
+        <img src="C:\Users\thond\Downloads\jerry and tom .jpeg" alt="flip image" class="flip">    
+    </div>
+    <div>
+        <h2>3.blur to focus effect</h2>
+        <img src="C:\Users\thond\Downloads\jerry and tom .jpeg" alt="blur image" class="blur">
+    </div>
+    <div>
+        <h2>4.pulsing effect</h2>
+        <img src="C:\Users\thond\Downloads\jerry and tom .jpeg" alt="pulse image" class="pulse">
+    </div>
+    <div>
+        <h2>5.shake effect</h2>
+        <img src="C:\Users\thond\Downloads\jerry and tom .jpeg" alt="shake image" class="shake">
+    </div>
+    <div>
+        <h2>6.spin effect</h2>
+        <img src="C:\Users\thond\Downloads\jerry and tom .jpeg" alt="spin image" class="spin">
+    </div>
+    <div>
+        <h2>7.skew effect</h2>
+        <img src="C:\Users\thond\Downloads\jerry and tom .jpeg" alt="tilt image" class="tilt">
+    </div>
+</div>
+</body>
+</html>
